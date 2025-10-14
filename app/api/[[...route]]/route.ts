@@ -5,11 +5,13 @@ const app = new Hono().basePath('/api')
 
 export const runtime = "edge";
 
+import summary from './summary'
 import accounts from './accounts'
 import categories from './categories'
 import transactions from './transactions'
 
 const routes = app
+  .route('/summary', summary)
   .route('/accounts', accounts)
   .route('/categories', categories)
   .route('/transactions', transactions)
