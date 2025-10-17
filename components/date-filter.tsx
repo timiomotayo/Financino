@@ -88,12 +88,12 @@ export const DateFilter = () => {
           onSelect={setDate}
           numberOfMonths={2}
         />
-        <div className="p-4 w-full flex flex-col items-center gap-x-2 gap-y-2">
+        <div className="p-4 w-full flex justify-end gap-2">
           <PopoverClose asChild>
             <Button
               onClick={onReset}
               disabled={!date?.from || !date?.to}
-              className="w-full"
+              className="w-1/2"
               variant="outline"
             >
               Reset
@@ -103,7 +103,7 @@ export const DateFilter = () => {
             <Button
               onClick={() => pushToUrl(date)}
               disabled={!date?.from || !date?.to}
-              className="w-full"
+              className="w-1/2"
             >
               Apply
             </Button>
