@@ -2,15 +2,23 @@ import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
 
 const app = new Hono().basePath('/api')
+
 export const runtime = "edge";
 
+import summary from './summary'
+import accounts from './accounts'
+import categories from './categories'
+import transactions from './transactions'
 
-import authors from './authors'
-import books from './books'
-
-
-app.route('/authors', authors)
-app.route('/books', books)
+const routes = app
+  .route('/summary', summary)
+  .route('/accounts', accounts)
+  .route('/categories', categories)
+  .route('/transactions', transactions)
 
 export const GET = handle(app)
 export const POST = handle(app)
+export const PATCH = handle(app)
+export const DELETE = handle(app)
+
+export type AppType = typeof routes;
