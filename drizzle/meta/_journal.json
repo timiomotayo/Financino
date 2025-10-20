@@ -36,6 +36,20 @@
       "when": 1758837763682,
       "tag": "0004_living_reaper",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1760827671344,
+      "tag": "0005_graceful_squadron_supreme",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1760909936876,
+      "tag": "0006_dusty_boom_boom",
+      "breakpoints": true
     }
   ]
 }
